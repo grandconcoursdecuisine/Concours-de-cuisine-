@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire d’inscription – Grand Concours de Cuisine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #d35400;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 80px;
+    }
+    .checkbox-group {
+      margin-top: 10px;
+    }
+    .section {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulaire d’inscription – Grand Concours de Cuisine 🍽️🔥</h1>
+
+  <p><strong>Date du concours :</strong> 15 Mai au 30 Mai</p>
+  <p><strong>Lieu :</strong> PARIS, NICE, MARSEILLE</p>
+  <p><strong>Récompense :</strong> 25 000€ + cadeaux des sponsors</p>
+
+  <form>
+    <div class="section">
+      <h2>Informations personnelles</h2>
+      <label>Nom et Prénom :
+        <input type="text" name="nom_prenom" required>
+      </label>
+      <label>Date de naissance :
+        <input type="date" name="date_naissance" required>
+      </label>
+      <label>Adresse :
+        <input type="text" name="adresse">
+      </label>
+      <label>Ville :
+        <input type="text" name="ville">
+      </label>
+      <label>Code postal :
+        <input type="text" name="code_postal">
+      </label>
+      <label>Téléphone :
+        <input type="tel" name="telephone">
+      </label>
+      <label>E-mail :
+        <input type="email" name="email">
+      </label>
+    </div>
+
+    <div class="section">
+      <h2>Expérience culinaire</h2>
+      <label><input type="radio" name="experience" value="amateur"> Amateur</label>
+      <label><input type="radio" name="experience" value="etudiant"> Étudiant(e) en cuisine</label>
+      <label><input type="radio" name="experience" value="professionnel"> Professionnel(le)</label>
+      <label>Si professionnel(le), indiquez votre spécialité :
+        <input type="text" name="specialite">
+      </label>
+      <label>Avez-vous déjà participé à un concours de cuisine ?</label>
+      <label><input type="radio" name="deja_participe" value="oui"> Oui, précisez lequel :
+        <input type="text" name="concours_prec">
+      </label>
+      <label><input type="radio" name="deja_participe" value="non"> Non</label>
+    </div>
+
+    <div class="section">
+      <h2>Votre candidature</h2>
+      <label>Pourquoi souhaitez-vous participer à ce concours ?
+        <textarea name="motivation"></textarea>
+      </label>
+      <label>Quel plat signature aimeriez-vous présenter ?
+        <textarea name="plat_signature"></textarea>
+      </label>
+    </div>
+
+    <div class="section">
+      <h2>Autorisations & engagements</h2>
+      <label><input type="checkbox" name="reglement" required> J’accepte le règlement du concours et m’engage à respecter les consignes.</label>
+      <label><input type="checkbox" name="image" required> J’autorise les organisateurs à utiliser mon image pour la promotion du concours.</label>
+      <label>Date :
+        <input type="date" name="date_signature">
+      </label>
+      <label>Signature :
+        <input type="text" name="signature">
+      </label>
+    </div>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+</body>
+</html>
